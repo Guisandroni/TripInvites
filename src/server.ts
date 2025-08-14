@@ -1,20 +1,13 @@
 import fastify from "fastify";
-import { ViagemCriada } from "./routes/viagem-criada";
-import { serializerCompiler, validatorCompiler } from "fastify-type-provider-zod";
-
-const app = fastify()
+import { env } from "process";
+import { appRoutes } from "./Services/routes";
 
 
-
-app.setValidatorCompiler(validatorCompiler);
-app.setSerializerCompiler(serializerCompiler);
- 
-app.register(ViagemCriada)
+ const app = fastify();
 
 
+app.register(appRoutes)
 
-app.listen({port: 3333}).then(()=>{
-    console.log('Servidor Rodando:')
-
-
+app.listen({port : 8080}).then(()=>{
+    console.log(`Server is running on port 8080`)
 })

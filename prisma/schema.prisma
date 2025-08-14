@@ -11,31 +11,15 @@ datasource db {
 }
 
 
-model Viagem{
-  id String @id @default(uuid()) //Texto - PK - Id único
-  destination String 
-  inicio_at DateTime
-  final_at DateTime
-  criado_at DateTime @default(now())
-  is_confirmado Boolean @default(false)
-  participantes Participante[]
+model Trips{
+  id String @id @default(uuid())
+  destination String
+  startDate DateTime
+  endDate DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  isConfirmed Boolean @default(false)
 
-
-  @@map("viagens")
+  @@map("trips")
 }
 
-model Participante{
-  id String @id @default(uuid()) //Texto - PK - Id único
-
-  nome String
-  email String
-  is_confirmado Boolean @default(false)
-  is_owner Boolean @default(false)
-  
-  viagem Viagem @relation(fields: [viagem_id], references: [id])
-
-  viagem_id String
-
-  
-  @@map("participantes")
-}

@@ -1,0 +1,19 @@
+
+
+POST http://localhost:8080/trips/register
+Content-Type: application/json
+
+{
+    "destination":"Paris",
+    "startDate":"2023-10-01",
+    "endDate":"2023-10-10"
+}
+ 
+
+###
+GET http://localhost:8080/trips/list
+Content-Type: application/json
+
+###
+DELETE http://localhost:8080/trips/delete/906594c6-6c2c-4c5a-af0c-45a519d942e6
+Content-Type: application/json
