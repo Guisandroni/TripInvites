@@ -10,6 +10,19 @@ Content-Type: application/json
 }
  
 
+### Register Trip
+POST http://localhost:8080/trips/register
+Content-Type: application/json
+
+{
+    "destination":"Paris",
+    "startDate":"2025-10-01",
+    "endDate":"2025-10-10",
+    "UserName": "John Doe",
+    "UserEmail": "johndoe@example.com"
+}
+
+
 ###
 GET http://localhost:8080/trips/list
 Content-Type: application/json

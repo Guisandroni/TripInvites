@@ -1,1 +1,0 @@
-npx prisma init --datasource-provider SQLITE
