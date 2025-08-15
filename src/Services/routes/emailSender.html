@@ -1,0 +1,86 @@
+<div>
+    <div class="header">
+        <h2>Confirmação de Cadastro de Viagem</h2>
+    </div>
+
+    <div class="content">
+        <p>Olá, <strong>${OwnerName}</strong>!</p>
+
+        <p>Sua viagem foi cadastrada com sucesso em nosso sistema. Abaixo estão os detalhes:</p>
+        
+        <div class="details">
+            <div class="detail-item">
+                <span class="emoji">📍</span> <strong>Destino:</strong> ${destination}
+            </div>
+            <div class="detail-item">
+                <span class="emoji">📅</span> <strong>Data de Início:</strong> ${dayjs(startDate).format("LL")}
+            </div>
+            <div class="detail-item">
+                <span class="emoji">📅</span> <strong>Data de Término:</strong> ${dayjs(endDate).format("LL")}
+            </div>
+
+            <div>
+            <Button class="button">
+            <a href="${`http://localhost:8080/trips/${data.id}/confirm`}}">Confirmar Viagem</a>
+            </Button>
+            </div>
+
+        
+        </div>
+
+        
+
+</div>
+
+<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .detail-item {
+            margin-bottom: 10px;
+        }
+        .emoji {
+            margin-right: 8px;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eeeeee;
+            text-align: center;
+            font-size: 14px;
+            color: #777777;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+    </style>
